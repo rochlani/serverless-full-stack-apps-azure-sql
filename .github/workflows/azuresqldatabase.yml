@@ -5,7 +5,7 @@ on:
     branches:
       - main
   pull_request:
-    types: [opened , synchronize, reopened, closed]
+    types: [opened,synchronize, reopened, closed]
     branches:
       - main
 
@@ -19,5 +19,5 @@ jobs:
       - uses: Azure/sql-action@v1.2
         with:
           connection-string: ${{ secrets.AZURE_SQL_CONNECTION_STRING }}
-          # uses dacpac to deploy database schema
+          # uses dacpac to deploy database schema gul
           dacpac-package: './database/dacpac/bus-db.dacpac'
